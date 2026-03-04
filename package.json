@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "A Fibonacci coding implementation.",
   "license": "WTFPL",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luncheon/fibonacci-code.git"
+  },
   "type": "module",
   "main": "index.js",
   "types": "index.d.ts",
