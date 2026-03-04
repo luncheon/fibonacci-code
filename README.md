@@ -23,3 +23,7 @@ for (let n = 1; n < 1_000_000; n++) {
 ## License
 
 [WTFPL](http://www.wtfpl.net)
+
+## See also
+
+- [@luncheon/varint](https://www.npmjs.com/package/@luncheon/varint): A `BigInt`-native varint codec supporting arbitrary chunk sizes and zigzag encoding.
