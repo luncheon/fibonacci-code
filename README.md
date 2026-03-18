@@ -20,6 +20,29 @@ for (let n = 1; n < 1_000_000; n++) {
 }
 ```
 
+## CLI
+
+```bash
+$ npx @luncheon/fibonacci-code 3 10-20 0x80
+   3 0011
+  10 010011
+  11 001011
+  12 101011
+  13 0000011
+  14 1000011
+  15 0100011
+  16 0010011
+  17 1010011
+  18 0001011
+  19 1001011
+  20 0101011
+ 128 00010001011
+```
+
+## Reference
+
+- [Aviezri S. Fraenkel, Shmuel T. Kleinb. (1996). "Robust universal complete codes for transmission and compression"](https://www.sciencedirect.com/science/article/pii/0166218X9300116H)
+
 ## License
 
 [WTFPL](http://www.wtfpl.net)
