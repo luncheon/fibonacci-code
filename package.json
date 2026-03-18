@@ -8,6 +8,7 @@
     "url": "git+https://github.com/luncheon/fibonacci-code.git"
   },
   "type": "module",
+  "bin": "cli.js",
   "main": "index.js",
   "types": "index.d.ts",
   "files": ["index.d.ts"],
