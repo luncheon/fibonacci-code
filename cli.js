@@ -6,8 +6,8 @@ if (process.argv.length === 2) {
 } else {
   const ranges = process.argv.slice(2).map((arg) => {
     const split = arg.split("-", 2);
-    const min = parseInt(split[0]);
-    const max = split[1] ? parseInt(split[1]) : min;
+    const min = Number(split[0]);
+    const max = split[1] ? Number(split[1]) : min;
     return [min, max];
   });
   const maxLength = String(Math.max(...ranges.flat())).length;
