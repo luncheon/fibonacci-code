@@ -18,6 +18,7 @@ it("encodeFibonacci", () => {
   assert.deepEqual(encodeFibonacci(13), [0, 0, 0, 0, 0, 1, 1]);
   assert.deepEqual(encodeFibonacci(14), [1, 0, 0, 0, 0, 1, 1]);
   assert.deepEqual(encodeFibonacci(15), [0, 1, 0, 0, 0, 1, 1]);
+  assert.equal([1, 10, 100, 1000].flatMap(encodeFibonacci).join(""), "11010011001010000110000010000000011");
 });
 
 it("encodeFibonacci valid range", () => {
@@ -28,6 +29,14 @@ it("encodeFibonacci valid range", () => {
 });
 
 it("decodeFibonacci", () => {
+  assert.deepEqual(decodeFibonacci([0, 0, 0, 0, 1, 1]), 8);
+
+  const bits = Iterator.from("11010011001010000110000010000000011").map(bit => parseInt(bit));
+  assert.equal(decodeFibonacci(bits), 1);
+  assert.equal(decodeFibonacci(bits), 10);
+  assert.equal(decodeFibonacci(bits), 100);
+  assert.equal(decodeFibonacci(bits), 1000);
+
   for (let n = 1; n < 1_000_000; n++) {
     assert.equal(decodeFibonacci(encodeFibonacci(n)), n);
   }
